@@ -1,0 +1,27 @@
+{
+  "name": "balderdash",
+  "version": "1.0.0",
+  "description": "balderdash mobile application",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeeetPandya/Balderdash.git"
+  },
+  "author": "meet pandya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeeetPandya/Balderdash/issues"
+  },
+  "homepage": "https://github.com/MeeetPandya/Balderdash#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.11"
+  }
+}
