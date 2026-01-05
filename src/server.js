@@ -1,13 +1,19 @@
 import express from "express";
-import http from "http";
+import { createServer } from "node:http";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
 import { Server } from "socket.io";
 import jwt from "jsonwebtoken";
 
 const app = express();
-const server = http.createServer(app);
+const server = createServer(app);
 const io = new Server(server);
 
+const _dirname = dirname(fileURLToPath(import.meta.url));
+
 app.get("/", (req, res) => {
+  res.sendFile(join(_dirname, "index.html"))
   res.send("Balderdash Server is running!");
 });
 
